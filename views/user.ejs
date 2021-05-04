@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1><%= msg %>:</h1>
+    <% user.forEach(value => {%>
+    <form action="/book/update" method="post">
+      <div>
+        <input type="hidden" name="id" value="<%= value._id %>" />
+        username:
+        <input
+          type="text"
+          name="username"
+          id="username"
+          value="<%= value.username %>"
+        />
+        Email:
+        <input
+          type="email"
+          name="email"
+          id="email"
+          value="<%= value.email %>"
+        />
+        password:
+        <input
+          type="text"
+          name="password"
+          id="password"
+          value="<%= value.password %>"
+        />
+        <input type="submit" value="update" />
+        <input type="submit" formaction="/book/delete" value="Delete" />
+      </div>
+    </form>
+    <% }) %>
+  </body>
+</html>

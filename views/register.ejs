@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+  </head>
+  <body>
+    <% if(emailStaus === 'false') { %>
+    <div>email already in use</div>
+    <% } %>
+    <form action="/" method="post">
+      Name: <input type="text" name="name" id="name" /> emial:
+      <input type="email" name="email" id="email" /> NUmber:
+      <input type="text" name="number" id="numebr" /> Password:
+      <input type="password" name="password" id="password" /> Repeat Password:
+      <input type="password" name="rPassword" id="rPassword" />
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>
